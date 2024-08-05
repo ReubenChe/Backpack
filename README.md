@@ -4,7 +4,7 @@
 
 ### 主界面
 
-![image]([main/img/PixPin_2024-08-05_10-39-37.png](https://github.com/ReubenChe/Backpack/blob/main/img/PixPin_2024-08-05_10-39-37.png))
+![image](https://github.com/ReubenChe/Backpack/blob/main/img/PixPin_2024-08-05_10-39-37.png)
 ## 功能介绍
 
 ### 1. 查询背包中所有物品
