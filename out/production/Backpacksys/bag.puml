@@ -1,0 +1,60 @@
+@startuml
+class Backpack {
+    - slots: List<Slot>
+    - wallet: Wallet
+    + queryAllItems(): void
+    + queryItem(nameOrId: String): void
+    + queryMoney(): void
+    + identifyItem(nameOrId: String): void
+    + addItem(nameOrId: String, quantity: int): void
+    + destroyItem(nameOrId: String, quantity: int): void
+    + tradeItem(nameOrId: String, quantity: int): void
+    + organizeBackpack(): void
+    + expandBackpack(): void
+}
+
+class Slot {
+    - item: Item
+    - quantity: int
+}
+
+class Wallet {
+    - money: int
+    + queryMoney(): int
+}
+
+class Item {
+    - name: String
+    - type: String
+    - id: String
+    - price: int
+    - description: String
+    - identified: boolean
+    + identify(): void
+}
+
+class Equipment extends Item {
+    - level: int
+    - quality: int
+    + destroy(): void
+    + trade(): void
+}
+
+class Prop extends Item {
+    - taskDisplay: String
+}
+
+class Material extends Item {
+    + destroy(): void
+    + trade(): void
+}
+
+class Consumable extends Item {
+    + destroy(): void
+    + trade(): void
+}
+
+Backpack "1" -- "30" Slot
+Slot "1" -- "1" Item
+Backpack "1" -- "1" Wallet
+@enduml
